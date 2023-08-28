@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script lang="JavaScript">
+
+    function média()
+        {
+            var n1, n2, n3,n4, resultado;
+            n1 = parseInt(document.frm.txtNum1.value);
+            n2 = parseInt(document.frm.txtNum2.value);
+            n3 = parseInt(document.frm.txtNum3.value);
+            n4 = parseInt(document.frm.txtNum4.value);
+            resultado = (n1 + n2 + n3 + n4)/4;
+            
+            document.getElementById("alvo").innerHTML = 
+                "<b>" + resultado + "</b>";
+        }
+    </script>
+</head>
+<body>
+
+        <form name="frm">
+        1º valor: <input type="text" name="txtNum1" size="5" value="0"><br></br>
+        2º valor: <input type="text" name="txtNum2" size="5" value="0"><br></br>
+        3º valor: <input type="text" name="txtNum3" size="5" value="0"><br></br>
+        4º valor: <input type="text" name="txtNum4" size="5" value="0"><br></br>
+        <input type="button" value="Calcular" name="btnVai" onclick="média();">
+    </form>
+
+    <p id="alvo"></p>
+</body>
+</html>

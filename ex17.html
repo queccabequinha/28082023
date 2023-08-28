@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script lang="JavaScript">
+
+        function tabuada()
+            {
+                var n;
+                n = parseInt(document.frm.txtNum1.value);
+
+                for (var i = 1; i <= 10; i++) {
+            
+                    document.getElementById("alvo").innerHTML += 
+                "<b>" + i + " x " + n + " = " + (i*n) + "<br>" + "</b>";
+                    
+                }
+            
+            }
+        </script>
+
+</head>
+<body>
+
+    <form name="frm">
+        Escreva um valor positivo: <input type="text" name="txtNum1" size="5" value="0"><br></br>
+
+        <input type="button" value="Calcular" name="btnVai" onclick="tabuada();">
+    </form>
+
+    <p id="alvo"></p>
+   
+</body>
+</html>
